@@ -492,7 +492,7 @@ class FfmpegFormat(Format):
 
         def _skip_frames(self, n=1):
             """Reads and throws away n frames"""
-            for i in range(n):
+            for i in range(np.int8(n)):
                 self._read_gen.__next__()
             self._pos += n
 
